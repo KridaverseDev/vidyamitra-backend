@@ -1,5 +1,3 @@
 .env
 firebase_prod.json
 firebase_dev.json
-firebase_prod.json
-firebase_dev.json

@@ -1,0 +1,71 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info
+dist/
+build/
+.venv
+venv/
+env/
+ENV/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+/media
+/static
+/assets
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Firebase credentials
+firebase_prod.json
+firebase_dev.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation
+*.md
+!README.md
+BACKEND_ANALYSIS.md
+diagrams/
+
+# Scripts
+*.ps1
+*.sh
+setup.sh
+run.ps1
+run-commands.ps1
+
+# Lockfiles (keep poetry.lock, ignore others)
+lockfiles/
+
+# Pants
+.pants.d/
+.pants.workdir/
+
+# Test files
+.pytest_cache/
+.coverage
+htmlcov/
+

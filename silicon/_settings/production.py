@@ -39,21 +39,11 @@ CORS_ALLOWED_ORIGINS = [
     # Add production frontend URL here
     # "https://your-production-frontend.com",
 ]
-
 # Allow credentials (cookies, authorization headers) in CORS requests
 CORS_ALLOW_CREDENTIALS = True
-
 # Application definition
-
-
 ROOT_URLCONF = "core.urls"
-
-
 WSGI_APPLICATION = "silicon.core.wsgi.application"
-
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
     "default": {

@@ -10,6 +10,10 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
+# Set APP_MODE if not already set
+if not os.environ.get("APP_MODE"):
+    os.environ.setdefault("APP_MODE", "prod")
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "silicon.core.settings")
 
 application = get_wsgi_application()

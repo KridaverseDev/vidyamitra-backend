@@ -1,0 +1,46 @@
+{
+
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "runserver-local",
+      "type": "debugpy",
+      "request": "launch",
+      "args": ["runserver"],
+      "django": true,
+      "autoStartBrowser": false,
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/silicon/_microservices/admin/manage.py",
+      "env": { "APP_MODE": "local", "PYTHONPATH": "${workspaceFolder}" }
+    },
+    {
+      "name": "runserver-dev",
+      "type": "debugpy",
+      "request": "launch",
+      "args": ["runserver"],
+      "django": true,
+      "autoStartBrowser": false,
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/silicon/_microservices/admin/manage.py",
+      "env": { "APP_MODE": "dev", "PYTHONPATH": "${workspaceFolder}" }
+    },
+    {
+      "command": "make run MODE=local",
+      "name": "backend-local",
+      "request": "launch",
+      "type": "node-terminal",
+      "env": {
+        "APP_MODE": "local"
+      }
+    },
+    {
+      "command": "make run MODE=dev",
+      "name": "backend-dev",
+      "request": "launch",
+      "type": "node-terminal",
+      "env": {
+        "APP_MODE": "dev"
+      }
+    }
+  ]
+}

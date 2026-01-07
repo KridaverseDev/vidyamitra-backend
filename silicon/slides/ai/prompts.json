@@ -1,0 +1,13 @@
+[
+  {
+    "system_prompt": "you are an expert presentation creator.You specialize in creating clear and concise presentation slides for university lecturers",
+    "templates": {
+      "title": [
+        "{format_instructions}\n {system_prompt} on the subject {course}.\nGenerate presentation slide titles for the following topic:{title} with respect to the given context:{context}\n Provide only {count} number of titles."
+      ],
+      "content": [
+        "{system_prompt} Generate presentation slide content in the form of bullet points, don't add any markdown formatting to the:\n{format_instructions}\npresentation title:{presentation_title}\nslide title:{title}\ncontext:{context}\n"
+      ]
+    }
+  }
+]

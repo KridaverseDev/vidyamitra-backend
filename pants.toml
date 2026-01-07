@@ -1,0 +1,54 @@
+[GLOBAL]
+pants_version = "2.21.0"
+pants_ignore_use_gitignore = false
+
+
+backend_packages.add = [
+  'pants.backend.python',
+  'pants.backend.experimental.python.framework.django',
+  'pants.backend.python.lint.autoflake',
+  'pants.backend.python.lint.docformatter',
+  'pants.backend.python.lint.flake8',
+  'pants.backend.python.lint.isort',
+  'pants.backend.python.lint.black',
+  'pants.backend.python.typecheck.mypy',
+]
+
+
+
+[anonymous-telemetry]
+enabled = false
+
+[source]
+root_patterns = ["/"]
+
+[python]
+interpreter_constraints = [">=3.12,<3.13"]
+enable_resolves = true
+resolves = { python-default = "lockfiles/python-default.lock", pytest = "lockfiles/pytest.lock", mypy = "lockfiles/mypy.lock"}
+
+
+[python-bootstrap]
+search_path = ["<PATH>", "<PYENV>"]
+
+[python-infer]
+string_imports = true
+use_rust_parser = true
+
+
+
+
+[mypy]
+install_from_resolve = "mypy" 
+interpreter_constraints = [">=3.11,<3.12"]
+requirements  = [
+  "django-stubs",
+  "django-storages",
+  "django-ninja",
+  "django-ninja-extra",
+  "django-cors-headers",
+  "loguru==0.6.0",
+  "django-location-field",
+  'fcm-django',
+  'psycopg[binary]',
+]
